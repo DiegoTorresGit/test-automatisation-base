@@ -40,3 +40,19 @@ Feature: HU-ditorres Crear personaje Marvel (microservicio para gestión de pers
     Then status 400
     # And match response.name contains 'required'
     # And match response.powers contains 'required'
+
+  @id:4 @listarPersonaje @exitos200
+  Scenario: T-API-HU-ditorres-CA03-listar personaje-karate
+    * def jsonData = read('classpath:data/marvel_characters_api/request_create_character_invalid.json')
+    When method GET
+    Then status 200
+    # And match response.name contains 'required'
+    # And match response.powers contains 'required'
+
+  @id:5 @eliminarPersonaje @exitos200
+  Scenario: T-API-HU-ditorres-CA03-eliminar eliminar-karate
+    * path '1125'
+    When method DELETE
+    Then status 204
+    # And match response.name contains 'required'
+    # And match response.powers contains 'required'
