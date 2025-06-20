@@ -2,6 +2,7 @@
 Feature: HU-ditorres Crear personaje Marvel (microservicio para gestión de personajes)
   Background:
     * url port_marvel_characters_api
+    * path '/testuser/api/characters'
     * def generarHeaders =
       """
       function() {
