@@ -50,13 +50,13 @@ Feature: HU-ditorres Crear personaje Marvel (microservicio para gestión de pers
 
   @id:5 @eliminarPersonaje @exitos200
   Scenario: T-API-HU-ditorres-CA03-eliminar eliminar-karate
-    * path '1125'
+    * path '7'
     When method DELETE
     Then status 204
 
   @id:6 @actualizarPersonaje @exitos200
   Scenario: T-API-HU-ditorres-CA03-actualizar actualizar-karate
-    * path '709'
+    * path '8'
     * def jsonData = read('classpath:data/marvel_characters_api/request_create_character.json')
     * set jsonData.description = 'Updated description'
     And request jsonData
